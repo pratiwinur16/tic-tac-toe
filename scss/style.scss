@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo|Patrick+Hand+SC');
+
+$background: #d2ccd6;
+$board: #D796EE;
+$dark: #721d87;
+$blue: #1c4993;
+$red: #e33840;
+
+body {
+  background: $background;
+  height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1 {
+  font-family: 'Patrick Hand SC', cursive;
+  font-style: italic;
+  color: $dark;
+  margin-bottom: 0.1em;
+  span {
+    display: block;
+    font-size: 2.2rem;
+  }
+}
+
+.board {
+  background: $board;  
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 30px auto;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid $dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arimo', sans-serif;
+  font-size: 5rem;
+  &.blue {
+    color: $blue;
+  }
+  &.red {
+    color: $red;
+  }
+  &:nth-of-type(2) {
+    border-left: none;
+    border-right: none;
+  }
+  &.center {
+    border-top: none;
+    border-bottom: none;
+  }
+}
